@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+<title>Late Christmas</title>
+<!-- <script src="Christmass/script.js"></script> -->
+</head>
+
+<body>
+    <link rel="stylesheet" href="style.css">
+    <div class = "xmas-tree">
+        <div class = "star">
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <div class = "top"></div>
+        <div class = "mid"></div>
+        <div class = "bot"></div>
+        <div class = "stem"></div>
+        <div class = "snow-ground"></div>
+    </div>
+    
+    <script>
+        function makeSnow() {
+        const snow = document.createElement('div');
+        const size = Math.random() * 4.5 + 3.5;
+        snow.className = 'snow';
+        snow.style.width = size + 'px';
+        snow.style.height = size + 'px';
+        snow.style.left = Math.random() * window.
+        innerWidth + 'px';
+        snow.style.opacity = size / 8;
+        if (size < 7) {
+            snow.style.zIndex = -5;
+        }
+        snow.style.animationDuration = Math.random
+            () * 3 + 2 + 's';
+        document.body.appendChild(snow);
+        setTimeout(() => snow.remove(), 5000);
+    }
+
+    setInterval (makeSnow, 40);
+    </script>
+</body>
